@@ -11,6 +11,10 @@ on:
         description: 'Nombre del micro'
         required: true
         type: string
+      docker_file:
+        description: 'Ruta del Dockerfile'
+        required: true
+        type: string
 
 jobs:
   build:
@@ -42,6 +46,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: ${{ inputs.docker_file }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: |
