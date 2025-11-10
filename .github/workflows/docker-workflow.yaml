@@ -7,6 +7,10 @@ on:
         description: 'Nombre de la imagen Docker (ej: myapp)'
         required: true
         type: string
+      micro_name:
+        description: 'Nombre del micro'
+        required: true
+        type: string
 
 jobs:
   build:
