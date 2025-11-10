@@ -84,5 +84,5 @@ jobs:
 
       - name: Deploy files
         run: |
-          helm show chart oci://registry-1.docker.io/danielopezh/dlh-chart --version 4
-          helm upgrade --install ${{ inputs.micro_name }} oci://registry-1.docker.io/danielopezh/dlh-chart --version 4 --values values.yaml
+          helm show chart oci://registry-1.docker.io/danielopezh/dlh-chart --version 5
+          helm upgrade --install ${{ inputs.micro_name }} oci://registry-1.docker.io/danielopezh/dlh-chart --version 5 --values values.yaml
